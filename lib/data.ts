@@ -134,8 +134,8 @@ export const projectsData = [
     images: [portfolio1, portfolio2, portfolio3],
     fullDescription:
       "This portfolio website features my most significant projects. To embrace cutting-edge technology, I developed it using TypeScript. The notable features of this website include server actions for sending contact emails, a dynamic light and dark mode that aligns with the user's computer theme, an advanced navbar utilising context to track the active section, and visually appealing animations and motions achieved through a combination of Tailwind and Framer Motion.",
-    liveSite: "",
-    sourceCode: ""
+    liveSite: "https://jerry-portfolio-website.vercel.app/",
+    sourceCode: "https://github.com/JerryBS01/portfolio-website"
   },
 ] as const;
 

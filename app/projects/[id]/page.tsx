@@ -57,16 +57,14 @@ const ProjectPage = ({
             </div>
 
             <div className="flex flex-row py-3 justify-between">
-              {selectedProject.liveSite !== "" && (
-                <Link
-                  className="group bg-white px-7 py-1 flex items-center gap-2 rounded-full hover:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/15 dark:bg-white/10 dark:text-white dark:hover:text-gray-200"
-                  href={selectedProject.liveSite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Site
-                </Link>
-              )}
+              <Link
+                className="group bg-white px-7 py-1 flex items-center gap-2 rounded-full hover:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/15 dark:bg-white/10 dark:text-white dark:hover:text-gray-200"
+                href={selectedProject.liveSite}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Site
+              </Link>
               {selectedProject.sourceCode !== "" && (
                 <Link
                   className="group bg-white px-7 py-1 flex items-center gap-2 rounded-full hover:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/15 dark:bg-white/10 dark:text-white dark:hover:text-gray-200"
