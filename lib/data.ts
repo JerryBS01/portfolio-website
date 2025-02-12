@@ -65,7 +65,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Technical Business Analyst",
+    title: "Technical Business Analyst | Coles",
     location: "Melbourne, Australia",
     description: [
       "Automated three operational processes using API integrations to reduce 4 hours of manual and repetitive tasks to just a few minutes.",
@@ -77,7 +77,7 @@ export const experiencesData = [
     date: "July 2024 - December 2024",
   },
   {
-    title: "Web Content Officer",
+    title: "Web Content Officer | Monash University",
     location: "Melbourne, Australia",
     description: [
       "Rebuilt the LibGuides web system for enhanced usability, accessibility and SEO, which became a renowned citing & referencing resource for Monash University that receives over 2 million unique visitors annually.",
@@ -87,7 +87,7 @@ export const experiencesData = [
     date: "January 2024 - July 2024",
   },
   {
-    title: "Web Designer",
+    title: "Web Designer | DART Group Australia",
     location: "Perth, Australia",
     description: [
       "Redesigned DART's website to improve SEO and raise awareness for their domestic violence prevention training programs."
@@ -95,7 +95,7 @@ export const experiencesData = [
     date: "November 2023 - January 2024",
   },
   {
-    title: "Front-End Engineer",
+    title: "Front-End Engineer | Indofood",
     location: "Jakarta, Indonesia",
     description: [
       "Developed front-end of online ordering system for Indomie instant noodles which streamlined ordering process for product distributors in 90+ countries."
