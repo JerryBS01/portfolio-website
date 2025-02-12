@@ -16,7 +16,7 @@ const Contact = () => {
     return (
         <motion.section
             ref={ref}
-            className="relative mb-50 max-w-[45rem] w-[min(100%, 38rem)] text-center leading-8 sm:mb-40 scroll-mt-50"
+            className="relative max-w-[45rem] w-[min(100%, 38rem)] text-center leading-8 scroll-mt-50"
             id="contact"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -27,7 +27,7 @@ const Contact = () => {
         >
             <SectionHeading>Contact Me</SectionHeading>
             <motion.div
-                className="absolute top-20 left-1/2 -translate-x-32"
+                className="absolute top-20 left-1/2 -translate-x-24"
                 initial={{ opacity: 1 }}
                 whileInView={{ opacity: 0 }}
                 transition={{ delay: 1, duration: 1 }}
@@ -35,7 +35,7 @@ const Contact = () => {
                     once: true
                 }}
             >
-                <GrContact size={250} />
+                <GrContact size={200} />
             </motion.div>
             <motion.div
                 className=""
@@ -86,7 +86,7 @@ const Contact = () => {
 
             <footer className="my-10 px-4 text-center text-gray-500">
                 <small className="mb-2 text-xs">
-                    &copy; 2023 Jerry S. All rights reserved.
+                    &copy; 2025 Jerry S. All rights reserved.
                 </small>
             </footer>
         </motion.section>

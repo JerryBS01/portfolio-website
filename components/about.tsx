@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from './sectionHeading';
 import { FaLightbulb, FaTimes } from 'react-icons/fa';
 import { PiArrowBendDownLeft } from "react-icons/pi";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { useSectionInView } from '@/lib/hooks';
 import { experiencesData } from '@/lib/data';
 
@@ -14,6 +14,16 @@ const About = () => {
     const { ref } = useSectionInView('About');
 
     const [isButtonClicked, setButtonClicked] = useState(false);
+    const [hasMounted, setHasMounted] = useState(false);
+
+    // Prevent hydration errors by ensuring this runs only on the client
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
+
+    if (!hasMounted) {
+        return null; // Avoid rendering until mounted
+    }
 
     return (
         <motion.section
@@ -54,7 +64,7 @@ const About = () => {
                 </button>
             </motion.div>
             {!isButtonClicked && (
-                <div className="flex items-center w-full">
+                <div className="flex w-full text-left">
                     <motion.div
                         className="text-gray-800 sm:w-1/2"
                         initial={{ opacity: 0, scale: 0.75 }}
@@ -64,8 +74,16 @@ const About = () => {
                         <br className="md:hidden"></br>
                         <br className="md:hidden"></br>
                         <p className="dark:text-white">
-                            After completing a <span className="font-medium">web development internship</span> at <span className="font-medium">Indofood CBP</span>, I realized my passion for <span className="font-medium">web development</span>, prompting me to actively pursue various projects. My primary focus is <span className="font-medium">front-end development</span>, and I find particular enjoyment in working with <span className="font-medium">React</span>. However, I am also well-versed in <span className="font-medium">full-stack development</span> and <span className="font-medium">UI/UX design</span>. Fueled by my passion for <span className="font-medium">web development</span>, I volunteered as a <span className="font-medium">web designer and developer</span> for a not-for-profit organization, aiming to contribute to positive change in the world through my skills.
+                            Hi there! I am a final-year Bachelor of Information Technology student at Monash University with over a year of professional experience at companies like Coles and Monash University. My expertise spans business and data analysis, stakeholder management, requirements gathering, project and product management, process improvement, automation, agile methodologies, as well as web development and design.
                         </p>
+                        <p className="dark:text-white">
+                            Here are my career highlights:
+                        </p>
+                        <ul className="list-disc list-inside dark:text-white">
+                            <li>Over 1 year of proven success in automating operational processes to reduce hours of manual work into minutes across large organisations like Coles and Monash University.</li>
+                            <li>A history of leading the development of high-impact internal resources that became essential for accelerating delivery and operational speed across entire organisations.</li>
+                            <li>Developed renowned systems used daily by thousands of users, including the LibGuides web system for Monash University and an online ordering system for Indomie instant noodles.</li>
+                        </ul>
                     </motion.div>
                 </div>
             )}
@@ -76,7 +94,7 @@ const About = () => {
                     </div>
 
                     <motion.div
-                        className="text-gray-800 sm:w-1/2 mt-2 md:max-h-80 md:overflow-y-auto"
+                        className="text-gray-800 sm:w-1/2 mt-2"
                         initial={{ opacity: 0, scale: 0.75 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.25, duration: 1 }}
@@ -91,11 +109,13 @@ const About = () => {
                                 <h3 className="font-semibold capitalize dark:text-white">{experience.title}</h3>
                                 <p className="font-normal !mt-0 dark:text-white">{experience.date}</p>
                                 <p className="font-normal !mt-0 dark:text-white">{experience.location}</p>
-                                <p className="!mt-1 !font-normal text-gray-700 dark:text-gray-200">
-                                    {experience.description}
-                                </p>
+                                <ul className="list-disc list-inside text-sm text-left text-gray-700 dark:text-gray-200 mt-1">
+                                    {experience.description.map((desc, i) => (
+                                        <li key={i}>{desc}</li>
+                                    ))}
+                                </ul>
                                 {index !== experiencesData.length - 1 && (
-                                    <MdKeyboardDoubleArrowDown className="absolute left-40 top-50 translate-y-4 text-2xl dark:text-gray-200" />
+                                    <MdKeyboardDoubleArrowUp className="absolute left-40 top-50 translate-y-4 text-2xl dark:text-gray-200" />
                                 )}
                             </div>
                         ))}

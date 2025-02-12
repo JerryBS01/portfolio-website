@@ -22,10 +22,19 @@ import portfoliothumbnail from "@/public/portfoliothumbnail.png";
 import portfolio1 from "@/public/portfolio1.png";
 import portfolio2 from "@/public/portfolio2.png";
 import portfolio3 from "@/public/portfolio3.png";
+import toolsatcolesthumbnail from "@/public/toolsatcolesthumbnail.png";
+import toolsatcoles1 from "@/public/toolsatcoles1.png";
+import toolsatcoles2 from "@/public/toolsatcoles2.png";
+import toolsatcoles3 from "@/public/toolsatcoles3.png";
+import libguidesthumbnail from "@/public/libguidesthumbnail.png";
+import libguides1 from "@/public/libguides1.png";
+import libguides2 from "@/public/libguides2.png";
+import libguides3 from "@/public/libguides3.png";
 
 import indofoodlogo from "@/public/indofoodlogo.png";
 import dartlogo from "@/public/dartlogo.png";
-
+import monashlogo from "@/public/monashlogo.png";
+import coleslogo from "@/public/coleslogo.png";
 
 export const links = [
   {
@@ -56,22 +65,71 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Front-End Developer",
-    location: "Jakarta, Indonesia",
-    description:
-      "After successfully completing my IT diploma at Monash College, I secured a position as a web developer intern at Indofood CBP, the company renowned for Indomie. Throughout my internship, I was responsible for developing the front-end of the international division's online ordering website, incorporating functionalities such as order placement, transaction history, product listings, order drafting, and profile management. Adhering to the SCRUM framework, I also conducted bi-weekly presentations, showcasing the project progress to division leaders.",
-    date: "March 2023 - May 2023",
+    title: "Technical Business Analyst",
+    location: "Melbourne, Australia",
+    description: [
+      "Automated three operational processes using API integrations to reduce 4 hours of manual and repetitive tasks to just a few minutes.",
+      "Enhanced Coles' internal front door portal by developing user personas and journey maps, leading to process improvements which boosted Net Promoter Score by +25.",
+      "Established myself as a subject matter expert in the Atlassian Suite and Miro through addressing 100+ support tickets and incidents and facilitating 5 drop-in sessions.",
+      "Integrated 25+ global delivery framework templates into Coles' collaboration platform to accelerate project delivery across the technology department.",
+      "Spearheaded the development of an intranet resource to assist Coles' head office in selecting the most appropriate workplace tool based on tasks and needs, which drove tool alignment, efficiency, and cost reductions across the organisation."
+    ],
+    date: "July 2024 - December 2024",
   },
   {
-    title: "Web Designer & Developer",
-    location: "Remote, Australia",
-    description:
-      "In the summer of 2023, I volunteered as a web designer and developer for DART Group Australia, a company dedicated to preventing family and domestic violence in Perth. Utilising Figma, I created the website design, which received approval before I proceeded to develop it using WordPress. The website's primary goal is to showcase DART Group Australia and promote awareness of their training programs. Currently, the project is still in progress.",
-    date: "November 2023 - Present",
+    title: "Web Content Officer",
+    location: "Melbourne, Australia",
+    description: [
+      "Rebuilt the LibGuides web system for enhanced usability, accessibility and SEO, which became a renowned citing & referencing resource for Monash University that receives over 2 million unique visitors annually.",
+      "Coordinated full project lifecycle for the Library events webpage, from initial planning, requirements gathering and stakeholder management to design, development, user testing and deployment.",
+      "Automated administrative workflows within the Library's collaboration platform to increase operational efficiency by saving 2 hours a week."
+    ],
+    date: "January 2024 - July 2024",
+  },
+  {
+    title: "Web Designer",
+    location: "Perth, Australia",
+    description: [
+      "Redesigned DART's website to improve SEO and raise awareness for their domestic violence prevention training programs."
+    ],
+    date: "November 2023 - January 2024",
+  },
+  {
+    title: "Front-End Engineer",
+    location: "Jakarta, Indonesia",
+    description: [
+      "Developed front-end of online ordering system for Indomie instant noodles which streamlined ordering process for product distributors in 90+ countries."
+    ],
+    date: "March 2023 - May 2023",
   }
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Tools @ Coles",
+    id: "tools-at-coles",
+    description:
+      "Tools @ Coles is a collection of webpages which act as an intranet resource structured to guide employees in selecting the most appropriate workplace tool for their different tasks and needs at Coles.",
+    tags: ["SharePoint", "Miro"],
+    thumbnail: toolsatcolesthumbnail,
+    images: [toolsatcoles1, toolsatcoles2, toolsatcoles3],
+    fullDescription:
+      "Tools @ Coles was my major project during my IBL placement at Coles. It is intended to be the designated platform to guide employees across the Coles head office in selecting the most appropriate workplace tools for their different tasks and needs at Coles. The project's primary purpose is to support easy decision-making by providing brief yet concise information about tools for activities ranging from project and program management, whether waterfall or Agile, to content creation and general productivity. I was responsible for all tasks ranging from the initial planning phase, requirements gathering and stakeholder management, to design, development, publishing and distribution of the project.",
+    liveSite: "",
+    sourceCode: ""
+  },
+  {
+    title: "Monash LibGuides Website",
+    id: "monash-libguides",
+    description:
+      "LibGuides is Monash University's primary resource for citing and referencing, covering eight different citation styles.",
+    tags: ["HTML", "CSS", "JavaScript", "Squiz Matrix"],
+    thumbnail: libguidesthumbnail,
+    images: [libguides1, libguides2, libguides3],
+    fullDescription: "During my time working for the Monash University Library, I developed and maintained the webpages of the LibGuides web system, the university's primary resource for citing and referencing. Serving 86,000 students and 17,000 staff, the platform covers eight different citation styles and attracts over 2 million visits annually.",
+    liveSite: "https://www.monash.edu/library/help/citing-and-referencing",
+    sourceCode: ""
+  },
   {
     title: "Pizza Online Order Website",
     id: "pizza-online-order",
@@ -89,12 +147,12 @@ export const projectsData = [
     title: "Indofood Online Order Website",
     id: "indofood-online-order",
     description:
-    "Indofood is the largest food company in Indonesia. I developed the front-end of their online ordering website, incorporating features such as order placement, saving to draft, and transaction history.",
+      "Indofood is the largest food company in Indonesia. I developed the front-end of their online ordering website, incorporating features such as order placement, saving to draft, and transaction history.",
     tags: ["React", "Redux", "Bootstrap", "Chakra UI", "Axios"],
     thumbnail: indofoodthumbnail,
     images: [indofood1, indofood2, indofood3],
     fullDescription:
-    "In May 2023, I secured a position as a web developer intern at Indofood CBP, the renowned company behind Indomie. During my internship, I actively contributed to the development of the front-end for the international division's online ordering website. I played a key role in implementing functionalities such as order placement, transaction history tracking, product listings, order drafting, and profile management. The goal of the website is to simplify the online ordering process for distributors of Indofood products worldwide. Adhering to the SCRUM framework, I participated in bi-weekly presentations to update the division leader on the project's progress. This experience significantly contributed to the growth of both my technical skills and soft skills, providing valuable insights into the dynamic field of web development.",
+      "In May 2023, I secured a position as a web developer intern at Indofood CBP, the renowned company behind Indomie. During my internship, I actively contributed to the development of the front-end for the international division's online ordering website. I played a key role in implementing functionalities such as order placement, transaction history tracking, product listings, order drafting, and profile management. The goal of the website is to simplify the online ordering process for distributors of Indofood products worldwide. Adhering to the SCRUM framework, I participated in bi-weekly presentations to update the division leader on the project's progress. This experience significantly contributed to the growth of both my technical skills and soft skills, providing valuable insights into the dynamic field of web development.",
     liveSite: "https://indofoodinternational.com/",
     sourceCode: ""
   },
@@ -139,37 +197,16 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "PHP",
-  "WordPress",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Redux",
-  "Axios",
-  "Git",
-  "Vercel",
-  "Tailwind",
-  "SASS",
-  "C++",
-  "MongoDB",
-  "Express",
-  "Stripe",
-  "Python",
-  "R",
-  "Framer Motion",
-  "Bootstrap",
-  "Chakra UI",
-  "Tableau",
-  "Figma",
-  "Trello"
-] as const;
+export const skillsData = {
+  "Web Development & Design": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Redux", "Tailwind", "Bootstrap", "Framer Motion", "Node.js", "Express", "Axios", "WordPress", "Squiz Matrix", "Figma"],
+  "Data Analysis & Visualisation": ["Python", "R", "SQL", "Tableau"],
+  "Programming": ["Git", "C++", "Java", "PowerShell"],
+  "Project Management": ["Jira", "Confluence", "Trello", "Miro"]
+};
 
 export const affiliationsData = [
   indofoodlogo,
-  dartlogo
+  dartlogo,
+  monashlogo,
+  coleslogo
 ] as const;

@@ -13,7 +13,7 @@ const Projects = () => {
 
     return (
         <section ref={ref} className="mb-50 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-50" id="projects">
-            <SectionHeading>Projects</SectionHeading>
+            <SectionHeading>Notable Projects</SectionHeading>
             <div className="">
                 {
                     projectsData.map((project) => (

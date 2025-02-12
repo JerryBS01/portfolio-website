@@ -27,7 +27,7 @@ const Affiliations = () => {
 
     return (
         <section ref={ref} className="relative mb-50 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-50" id="affiliations">
-            <SectionHeading>My Affiliations</SectionHeading>
+            <SectionHeading>Affiliations (Past & Present)</SectionHeading>
             <ul className="flex flex-wrap justify-center gap-9 items-center">
                 {affiliationsData.map((logo, index) => (
                     <motion.div
